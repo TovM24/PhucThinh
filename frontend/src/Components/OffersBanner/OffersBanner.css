@@ -1,0 +1,9 @@
+.OffersBanner {
+    margin: 0 200px 200px 200px;
+}
+
+.OffersBanner-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}

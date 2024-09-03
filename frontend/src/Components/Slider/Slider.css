@@ -1,0 +1,117 @@
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    height: 350px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 60px; 
+    margin-bottom: 180px;
+}
+.mySwiper {
+    display: flex;
+    border-radius: 10px;
+}
+.slide-content {
+    z-index: 1;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2e2e30; 
+}
+.slide-content h1, .slide-content h3, .slide-content .slide-description {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+}
+.slide-content h1 {
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+.slide-cintent h3 {
+    font-size: 30px;
+    font-weight: 300;
+}
+.slide-content .slide-description {
+    width: 400px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #5a5a5c;
+}
+.slide-navigation {
+    display: flex; 
+    align-items: center;
+    gap: 45px;
+    margin-top: 40px;
+}
+.slide-navigation button {
+    width: 250px; 
+    height: 50px;
+    outline: none;
+    border: 1px solid #7a7a7a;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto 0;
+    letter-spacing: 2px;
+    box-shadow: 0 0 8px rgba(130, 98, 210, 0.5);
+    transition: box-shadow 0.3s ease;
+}
+.slide-navigation button:hover {
+    box-shadow: 0 0 16px rgba(130, 98, 210, 0.7);
+}
+.slide-navigation .button-none-active {
+    box-shadow: none;
+    border: 1px solid #8262d2;
+    color: #8262d2;
+}
+/* button 2 */
+.slide-navigation .button-none-active:hover {
+    box-shadow: 0 0 16px rgba(130, 98, 210, 0.7);
+}
+
+/* button chuyen huong giua cac slide  */
+.button-left, .button-right { 
+    position: absolute;
+    color: #8262d2;
+    border: none;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2c2b2d;
+    cursor: pointer;
+    border-radius: 360px;
+    z-index: 2;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.button-left {
+    left: 0;   
+    margin-left: 15px;
+}
+.button-right {
+    right: 0;
+    margin-right: 15px;
+}
+.button-left:active, .button-right:active {
+    transform: scale(0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+/* test */
