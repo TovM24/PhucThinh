@@ -13,7 +13,7 @@ const Navbar = () => {
 
     return (
         <div className="navbar">
-            <p className="name">demo</p>
+            <p className="name">Phuc Thinh</p>
 
             <ul ref={menuRef} className="nav-menu">
                 <li onClick={() => {setMenu("home")}}><Link className="nav-link" to='/'>Home</Link> {menu === "home" ? <hr/> : <></>} </li>
