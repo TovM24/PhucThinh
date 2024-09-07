@@ -1,3 +1,98 @@
+/* trend
+trend-top || trend-bottom
+trend-top__left || trend-top__right
+trend-shared */
+.flex-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.trending {
+    margin: 0 200px 200px 200px;
+}
+.trending-top {
+    justify-content: space-between;
+}
+/* begin left */
+.trending-top__left {
+    margin-left: 20px;
+    color: #fff;
+}
+.trending-top__left svg {
+    width: 30px;
+    height: 30px;
+}
+.trending-top__left h1 {
+    margin-left: 15px;
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+/* end left */
+/* begin right */
+.trending-top__right {
+    color: #fff;
+}
+.trending-top__show-all {
+    border-radius: 12px;
+    background: #333335;
+    padding: 10px 15px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.trending-top__show-all:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.trending-top__show-all h1 {
+    color: #8c8c8e;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+.trending-top__show-all p {
+    color: #8c8c8e;
+    opacity: 0.7;
+    transition: color 0.2s ease;
+}
+.trending-top__show-all svg {
+    width: 18px;
+    height: 18px;
+    color: #8c8c8e;
+    opacity: 0.7;
+    transition: color 0.2s ease;
+}
+.trending-top__navigation-button {
+    margin-left: 30px;
+    margin-right: 20px;
+    gap: 10px;
+}
+.trending-top__navigation-item {
+    border-radius: 12px;
+    background: #333335;
+    padding: 13px;
+    transition: color 0.2s ease, box-shadow 0.3s ease;
+    color: #8c8c8e;
+}
+.trending-top__navigation-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    color: #fff;
+}
+.trending-top__navigation-item:hover svg {
+    color: #fff;
+}
+.navigation-item svg {
+    width: 20px;
+    height: 20px;
+    transition: color 0.1s ease;
+}
+/* end right */
+.trending-bottom {
+    margin-top: 100px; 
+}
+.trending-bottom__container {
+    display: flex;
+}
 .h1-demo-trending {
     color: red;
 }

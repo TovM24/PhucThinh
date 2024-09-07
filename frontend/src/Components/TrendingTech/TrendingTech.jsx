@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 // Import Lucide React
 import { TrendingUp, ChevronRight, ChevronLeft  } from "lucide-react"
 
-// import TrendingTechItem from '../Item/Item' // Item form
+import TrendingTechItem from '../Item/Item' // Item form
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -12,16 +12,16 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 
-// Import trending tech css
-import './TrendingTech.css';
 // Import swiper styles
 import './Style.css'
+// Import trending tech css
+import './TrendingTech.css';
 
 // Import required module
 import { Navigation, Autoplay } from 'swiper/modules';
 
 // Import data product
-// import data_product from '../Assets/trending';
+import data_product from '../Assets/trending';
 
 
 // ý tưởng 
@@ -59,43 +59,43 @@ const slideDataDemo = [
 
 const TrendingTech = () => {
     return (
-        <div className='offers'>
-            <div className="offers-top offers-shared">
-                <div className="offers-top-leftt offers-shared">
+        <div className='trending'>
+            <div className="trending-top flex-between-center">
+                <div className="trending-top__left flex-between-center">
                     <TrendingUp />
                     <h1>Trending Tech</h1>
                 </div>
 
-                <div className="offers-top-right offers-shared content-none">
+                <div className="trending-top__right flex-between-center content-none">
 
-                    <div className="show-all offers-shared">
+                    <div className="trending-top__show-all flex-between-center">
                         <h1>Show All</h1>
                         <p>20</p>
                         <ChevronRight />
                     </div>
 
-                    <div className="navigation-button offers-shared">
-                        <div className="navigation-item offers-shared">
+                    <div className="trending-top__navigation-button flex-between-center">
+                        <div className="trending-top__navigation-item flex-between-center">
                             <ChevronLeft />
                         </div>
-                        <div className="navigation-item offers-shared">
+                        <div className="trending-top__navigation-item flex-between-center">
                             <ChevronRight />
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="offers-bottom">
+            <div className="trending-bottom">
                 {/* {getRandomItems(data_product, 4).map((item, i) => {
                     return <TrendingTechItem type="trendy" variant="itemm" key={i} id={item.id} name={item.name} subtitle={item.sub} image={item.image} current_price={item.current_price} previous_price={item.previous_price} color={item.color}/>
                 })} */}
-                <div className="offers-bottom-container">
+                <div className="trending-bottom__container">
                     <div className="button-left">
                         <ChevronLeft size={20} />
                     </div>
 
                     <Swiper
-                        slidesPerView={1}
+                        slidesPerView={4}
                         spaceBetween={30}
                         loop={true}
                         // config button left & right
@@ -105,10 +105,10 @@ const TrendingTech = () => {
                         className="mySwiper"
                     >
                         {/* render from slide data */}
-                        {slideDataDemo.map((slide, index) => (
+                        {data_product.map((slide, index) => (
                             <SwiperSlide key={index}>
-                                {/* <TrendingTechItem type="trendy" variant="itemm" id={slide.id} name={slide.name} subtitle={slide.sub} image={slide.image} current_price={slide.current_price} previous_price={slide.previous_price} color={slide.color} /> */}
-                                <h1 className='h1-demo-trending'>{slide.name}</h1>
+                                <TrendingTechItem type="trendy" variant="itemm" id={slide.id} name={slide.name} image={slide.image} current_price={slide.current_price} previous_price={slide.previous_price} color={slide.color} />
+                                {/* <h1 className='h1-demo-trending'>{slide.name}</h1> */}
                             </SwiperSlide>
                         ))}
                     </Swiper>
