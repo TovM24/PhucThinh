@@ -1,59 +1,30 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Item.css';
+import React from "react";
+import { Link } from "react-router-dom";
+
+// Import style item 
+import './Item.css'
 
 const Item = (props) => {
     return (
-        // ${props.variant}
-        <div className={`item-container ${props.type} ${props.variant}`} style={props.color ? { background: props.color } : {}}>
+        <div className="item" style={props.color ? { background: props.color } : {}}>
             <Link to={`/product/${props.id}`}>
-                {props.variant === "itemm" && (
-                    <div className="item">
-                        <div className="item-img">
-                            <img onClick={window.scrollTo(0,0)} src={props.image} alt="" />
-                        </div>
-                        <div className='item-name'>
-                            {props.type === 'category' && (
-                                <div className='category-name character-limit'>{props.name}</div>
-                            )}
-                            {props.type === 'trendy' && (
-                                <p className='trendy-name character-limit'>{props.name}</p>
-                            )}
-                        </div>
-                        <p className='item-subtitle character-limit'>{props.subtitle}</p>
-                        <div className="item-prices">
-                            {props.type === 'category' && (
-                                <div className="item-price-sale">
-                                    -{props.discount}% <p>off</p>
-                                </div>
-                            )} 
-                            {props.type === 'trendy' && (
-                                <div className="item-price-wrapper">
-                                    <div className="item-price">
-                                        {props.current_price} đ
-                                    </div>
-                                    <div className="previous">
-                                        {props.previous_price} đ
-                                    </div>
-                                </div>
-                            )}
+                <div className="item-container">
+                    <div className="item-container__img">
+                        <img onClick={window.scrollTo(0,0)} src={props.image} alt="" />
+                    </div>
+                    <div className="item-container__name">{props.name}</div>
+                    <p className="item-container__subtitle">{props.subtile}</p>
+                    <div className="item-container__prices">
+                        <div className="item-container__discount">-{props.discount}% <p>off</p></div>
+                        <div className="item-container__price-wrapper">
+                            <div className="item-container__current-price">{props.current_price} đ</div>
+                            <div className="item-container__previous-price">{props.previous_price} đ</div>
                         </div>
                     </div>
-                )}
-                {props.variant === "Itembanner" && (
-                    <div className="item-banner">
-                        <p>{props.name}</p>
-                        <div className="banner">
-                            <img onClick={window.scrollTo(0,0)} src={props.image} alt="" />
-                        </div>
-                        <div className="banner-sale">
-                            -{props.discount}% <p>off</p>
-                        </div>
-                    </div>
-                )}
+                </div>  
             </Link>
         </div>
-    );
-};
+    )
+}
 
 export default Item;
