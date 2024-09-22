@@ -39,14 +39,14 @@ const categories = [
         image: item4,
         color: "#d27e64"
     },
-    // {
-    //     id: 5,
-    //     name: "Office Equipment",
-    //     subtitle: "Acer, Asus, Lenovo, ...",
-    //     discount: 20,
-    //     image: item5,
-    //     color: "#d26465"
-    // }
+    {
+        id: 5,
+        name: "Office Equipment",
+        subtitle: "Acer, Asus, Lenovo, ...",
+        discount: 20,
+        image: item5,
+        color: "#d26465"
+    }
 ]
 
 export default categories;

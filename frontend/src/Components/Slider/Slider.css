@@ -8,7 +8,7 @@
     align-items: center;
     margin: 0 auto;
     margin-top: 60px; 
-    margin-bottom: 180px;
+    margin-bottom: 250px;
 }
 .mySwiper {
     display: flex;
@@ -100,11 +100,11 @@
 }
 .button-left {
     left: 0;   
-    margin-left: 15px;
+    margin-left: 80px;
 }
 .button-right {
     right: 0;
-    margin-right: 15px;
+    margin-right: 80px;
 }
 .button-left:active, .button-right:active {
     transform: scale(0.9);
