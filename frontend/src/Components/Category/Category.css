@@ -1,19 +1,30 @@
 .popular {
-    margin: 0 200px 200px 200px;
+    margin: 0 200px 250px 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-
 .popular h1 {
-    margin-left: 20px;
-    margin-bottom: 100px;
+    /* margin-left: 20px; */
+    /* margin-bottom: 100px; */
     color: #fff;
     font-size: 40px;
     font-weight: 400;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
+}
+.popular hr {
+    width: 200px;
+    height: 1px;
+    background-color: #fff;
+    border: none;
 }
 
 .popular-item {
+    margin-top: 100px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
     gap: 30px;

@@ -1,23 +1,29 @@
 .product {
-    gap: 10px;
-    margin: 0 200px 200px 200px;
-    /* margin-bottom: 200px; */
+    margin: 0 200px 250px 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-
 .product h1 {
-    margin-left: 20px;
-    margin-bottom: 50px;   
     color: #fff;
     font-size: 40px;
     font-weight: 400;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
+}
+.product hr { 
+    width: 200px;
+    height: 1px;
+    background-color: #fff;
+    border: none;
 }
 
 .product-item {
-    margin-top: 20px;
-    gap: 30px;
+    margin-top: 100px;
+    gap: 40px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
 }

@@ -46,57 +46,26 @@ const shuffleArray = (arr) => {
 //     return shuffle[0];  // Lấy phần tử đầu tiên của mảng đã xáo trộn
 // }
 
-
-const slideDataDemo = [
-    {
-        name: 'slide1'
-    }, 
-    {
-        name: 'slide2'
-    }
-]
-
-
 const TrendingTech = () => {
     return (
         <div className='trending'>
-            <div className="trending-top flex-between-center">
-                <div className="trending-top__left flex-between-center">
-                    <TrendingUp />
-                    <h1>Trending Tech</h1>
-                </div>
-
-                <div className="trending-top__right flex-between-center content-none">
-
-                    <div className="trending-top__show-all flex-between-center">
-                        <h1>Show All</h1>
-                        <p>20</p>
-                        <ChevronRight />
-                    </div>
-
-                    <div className="trending-top__navigation-button flex-between-center">
-                        <div className="trending-top__navigation-item flex-between-center">
-                            <ChevronLeft />
-                        </div>
-                        <div className="trending-top__navigation-item flex-between-center">
-                            <ChevronRight />
-                        </div>
-                    </div>
-                </div>
+            <div className="trending-top">
+                <h1>TRENDING TECH</h1>
+                <hr/>
             </div>
 
             <div className="trending-bottom">
                 {/* {getRandomItems(data_product, 4).map((item, i) => {
                     return <TrendingTechItem type="trendy" variant="itemm" key={i} id={item.id} name={item.name} subtitle={item.sub} image={item.image} current_price={item.current_price} previous_price={item.previous_price} color={item.color}/>
                 })} */}
-                <div className="trending-bottom__container">
+                <div className="trending-bottom__slider">
                     <div className="button-left">
                         <ChevronLeft size={20} />
                     </div>
 
                     <Swiper
-                        slidesPerView={4}
-                        spaceBetween={30}
+                        slidesPerView={5}
+                        spaceBetween={20}
                         loop={true}
                         // config button left & right
                         navigation={{ prevEl: '.button-left', nextEl: '.button-right' }}
@@ -107,17 +76,24 @@ const TrendingTech = () => {
                         {/* render from slide data */}
                         {data_product.map((slide, index) => (
                             <SwiperSlide key={index}>
-                                <TrendingTechItem type="trendy" variant="itemm" id={slide.id} name={slide.name} image={slide.image} current_price={slide.current_price} previous_price={slide.previous_price} color={slide.color} />
+                                <TrendingTechItem type="trendy" variant="itemm" id={slide.id} name={slide.name} image={slide.image} current_price={slide.current_price} previous_price={slide.previous_price} color={slide.color} discount={slide.discount}/>
                                 {/* <h1 className='h1-demo-trending'>{slide.name}</h1> */}
                             </SwiperSlide>
                         ))}
                     </Swiper>
 
-
                     <div className="button-right">
                         <ChevronRight size={20} />
                     </div>
                 </div>
+
+                <div className="trending-bottom__navigation flex-between-center content-none">
+                    <div className="trending-bottom__show-all flex-between-center">
+                        <h1>Show All</h1>
+                        <ChevronRight />
+                    </div>
+                </div>
+
             </div>
         </div>
     )

@@ -11,6 +11,7 @@ let data_product = [
         current_price: "16.990.000",
         image: item1,
         color: "#333335",
+        discount: 10,
     },
     {
         id: 2,
@@ -19,6 +20,7 @@ let data_product = [
         current_price: "16.990.000",
         image: item2,
         color: "#333335",
+        discount: 10,
     },
     {
         id: 3,
@@ -27,6 +29,7 @@ let data_product = [
         current_price: "16.990.000",
         image: item3,
         color: "#333335",
+        discount: 10,
     },
     {
         id: 4,
@@ -35,6 +38,7 @@ let data_product = [
         current_price: "16.990.000",
         image: item4,
         color: "#333335",
+        discount: 10,
     },
     {
         id: 5,
@@ -43,6 +47,7 @@ let data_product = [
         current_price: "16.990.000",
         image: item4,
         color: "#333335",
+        discount: 10,
     },
     {
         id: 6,
@@ -51,6 +56,7 @@ let data_product = [
         current_price: "16.990.000",
         image: item1,
         color: "#333335",
+        discount: 10,
     },
     {
         id: 7,
@@ -59,6 +65,7 @@ let data_product = [
         current_price: "16.990.000",
         image: item2,
         color: "#333335",
+        discount: 10,
     },
     {
         id: 8,
@@ -67,6 +74,7 @@ let data_product = [
         current_price: "16.990.000",
         image: item3,
         color: "#333335",
+        discount: 10,
     },
     {
         id: 9,
@@ -75,6 +83,7 @@ let data_product = [
         current_price: "16.990.000",
         image: item4,
         color: "#333335",
+        discount: 10,
     },
     {
         id: 10,
@@ -83,6 +92,7 @@ let data_product = [
         current_price: "16.990.000",
         image: item4,
         color: "#333335",
+        discount: 10,
     },
 ]
 
